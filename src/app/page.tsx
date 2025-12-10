@@ -1,15 +1,53 @@
-export default function Home() {
+import profileInfo from "@/data/profile";
+import Image from "next/image";
+
+function Title({ text }: { text: string }) {
+  const [first, ...rest] = text.split(" ");
   return (
-    <div className="font-base prose-headings:font-heading text-foreground prose-h1:sm:text-[33px] prose-h3:sm:text-xl prose-h3:md:text-2xl prose-h1:text-2xl prose-h2:text-2xl prose-h2:md:text-3xl prose-h3:lg:text-3xl prose-h3:xl:text-3xl prose-h2:lg:text-4xl prose-h2:2xl:text-4xl prose-h3:2xl:text-4xl prose-h1:md:text-5xl prose-h1:xl:text-5xl prose-h1:2xl:text-6xl">
-      <main className="relative flex flex-col justify-center items-center bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px] bg-background px-5 py-[100px] md:py-[200px] min-h-[100dvh] overflow-hidden">
-        <div className="mx-auto w-container max-w-full">
-          <div className="flex flex-col items-center text-center">
-            <h1 className="my-9 sm:mt-12 md:mt-[50px] sm:mb-10 md:mb-[60px] w-full md:w-full lg:w-2/3 xl:w-full text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-nowrap leading-snug">
-              Sumanth Reddy
-            </h1>
+    <h1 className="text-center text-4xl text-wrap whitespace-pre-line md:text-6xl lg:text-left lg:text-5xl">
+      {first + (rest.length ? "\n" + rest.join(" ") : "")}
+    </h1>
+  );
+}
+
+function ProfileImage() {
+  return (
+    <div className="h-56 w-56 rotate-[4deg] overflow-hidden rounded-2xl shadow-lg md:h-80 md:w-80 xl:h-64 xl:w-64">
+      <Image
+        src="/me3.jpg"
+        alt="Sumanth Chinnaobireddy"
+        width={320}
+        height={320}
+        className="h-full w-full object-cover"
+        priority
+      />
+    </div>
+  );
+}
+
+export default function Home() {
+  const { title, description } = profileInfo.homepage;
+
+  return (
+    <main className="bg-background relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-size-[70px_70px] px-5 py-[50px]">
+      {/* // TODO: change the py values above to adjust the content */}
+      <div className="w-[80%] max-w-full">
+        <div className="flex flex-col items-center sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
+          {/* //? Profile image first on mobile, second on desktop */}
+          <div className="mb-8 block lg:mb-0 lg:hidden">
+            <ProfileImage />
+          </div>
+          <div className="flex flex-1 flex-col gap-8">
+            <Title text={title} />
+            <p className="text-md text-center md:text-xl lg:text-left">
+              {description}
+            </p>
+          </div>
+          <div className="ml-8 hidden lg:block">
+            <ProfileImage />
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
