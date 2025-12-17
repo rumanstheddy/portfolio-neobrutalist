@@ -23,8 +23,8 @@ interface SocialButtonProps {
 const SocialButton: React.FC<SocialButtonProps> = ({
   href,
   svgPath,
-  aSize = 16,
-  svgSize = 8,
+  aSize = "size-16",
+  svgSize = "size-8",
   className = "",
   svgClassName = "",
   children,
@@ -34,14 +34,14 @@ const SocialButton: React.FC<SocialButtonProps> = ({
     target="_blank"
     rel="noopener noreferrer"
     href={href}
-    className={`rounded-base border-border shadow-nav dark:shadow-navDark dark:border-darkBorder flex items-center justify-center border-2 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:hover:shadow-none size-${aSize} ${className}`}
+    className={`rounded-base border-border shadow-nav dark:shadow-navDark dark:border-darkBorder flex items-center justify-center border-2 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:hover:shadow-none ${aSize} ${className}`}
     aria-label={ariaLabel}
   >
     {children && (
       <span className="hidden font-semibold sm:inline">{children}</span>
     )}
     <svg
-      className={`fill-foreground size-${svgSize} ${svgClassName}`}
+      className={`fill-foreground ${svgSize} ${svgClassName}`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
       aria-hidden="true"
