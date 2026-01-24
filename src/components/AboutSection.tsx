@@ -1,11 +1,11 @@
 import profileInfo from "@/data/profile";
 import IconButton from "./IconButton";
 
-import React from "react";
+import { ReactNode } from "react";
 import Image from "next/image";
 
 type SectionTitleProps = {
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
 };
 
@@ -66,10 +66,10 @@ export default function AboutSection() {
           {downloadTitle}
         </IconButton>
       </div>
-      
+
       {/* //? Education Section */}
       <div
-        className={`rounded-base sm:shadow-shadow border-border flex flex-col gap-4 border-x-0 border-y-2 bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:30px_30px] p-4 shadow-none sm:border-x-2 sm:p-8`}
+        className={`rounded-base sm:shadow-shadow border-border mt-8 flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-shadow sm:border-x-2 sm:p-8`}
       >
         <SectionTitle
           icon={
@@ -85,9 +85,9 @@ export default function AboutSection() {
         />
         {profileInfo.about.education &&
           profileInfo.about.education.length > 0 && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-8">
               {profileInfo.about.education.map((edu, idx) => (
-                <React.Fragment key={idx}>
+                <div key={idx} className="flex flex-col gap-2">
                   <LogoWithText
                     src={edu.logo}
                     alt={edu.university}
@@ -99,7 +99,7 @@ export default function AboutSection() {
                       {edu.duration}
                     </span>
                   </div>
-                </React.Fragment>
+                </div>
               ))}
             </div>
           )}
@@ -107,7 +107,7 @@ export default function AboutSection() {
 
       {/* //? Professional Experience Section */}
       <div
-        className={`rounded-base sm:shadow-shadow border-border mt-8 flex flex-col gap-4 border-x-0 border-y-2 bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:30px_30px] p-4 shadow-none sm:border-x-2 sm:p-8`}
+        className={`rounded-base sm:shadow-shadow border-border mt-8 flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-shadow sm:border-x-2 sm:p-8`}
       >
         <SectionTitle
           icon={
@@ -125,7 +125,7 @@ export default function AboutSection() {
         {experience && experience.length > 0 && (
           <div className="flex flex-col gap-8">
             {experience.map((position, idx) => (
-              <div key={idx} className="flex flex-col gap-4">
+              <div key={idx} className="flex flex-col gap-2">
                 <LogoWithText
                   src={position.companyLogo}
                   alt={position.company}
