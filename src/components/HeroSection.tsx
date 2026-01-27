@@ -38,6 +38,7 @@ export default function HeroSection() {
       </div>
       <div className="flex flex-1 flex-col gap-10">
         {/* // TODO: add the glittery border effect around name or profile image */}
+        {/* // TODO: Change image size according to window */}
         <Title text={homepageTitle} />
         <p className="text-md text-center md:text-xl lg:text-left">
           {description}

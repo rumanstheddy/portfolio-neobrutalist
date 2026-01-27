@@ -46,7 +46,7 @@ export default function AboutSection() {
     download,
     experience,
   } = profileInfo.about;
-  const { link: downloadLink, title: downloadTitle } = download;
+  const { link: downloadLink, text: buttonText } = download;
 
   return (
     <div className="flex flex-col gap-12">
@@ -63,7 +63,7 @@ export default function AboutSection() {
           ariaLabel="GitHub repository"
           className="bg-main"
         >
-          {downloadTitle}
+          {buttonText}
         </IconButton>
       </div>
 

@@ -1,16 +1,39 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "../components/AboutSection";
+import ProjectsSection from "../components/ProjectsSection";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    // TODO: change the py values to adjust the content
-    <main className="bg-background relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-size-[70px_70px] px-5 py-[50px]">
-      <div className="flex w-[80%] max-w-full flex-col gap-16">
-        {/* //? Hero section - name, profile photo, social buttons */}
-        <HeroSection />
-        {/* //? About section - resume */}
-        <AboutSection />
-      </div>
-    </main>
+    <>
+      {/* // TODO: change the py values to adjust the content */}
+      {/* // TODO: add stars wherever relevant for more neobrutalism flair - refer to 'stars' link in neobrutalism components */}
+      <Navbar />
+      <main className="bg-background relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-size-[70px_70px] px-5 py-[65px]">
+        <div className="flex w-[80%] max-w-full flex-col gap-16">
+          {/* //? Hero section - name, profile photo, social buttons */}
+          <section
+            className="border-border rounded-base md:bg-background bg-main md:text-foreground text-main-foreground p-5 py-7 md:border-x-4 md:border-b-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:py-16"
+            id="profile"
+          >
+            <HeroSection />
+          </section>
+          {/* //? About section - resume */}
+          <section
+            className="border-border rounded-base md:bg-background bg-main md:text-foreground text-main-foreground border-t-4 border-r-0 border-b-4 p-5 py-7 md:border-x-4 md:border-b-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:py-16"
+            id="about"
+          >
+            <AboutSection />
+          </section>
+          {/* //? Projects section */}
+          <section
+            className="border-border rounded-base md:bg-background bg-main md:text-foreground text-main-foreground border-t-4 border-r-0 border-b-4 p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:py-16"
+            id="projects"
+          >
+            <ProjectsSection />
+          </section>
+        </div>
+      </main>
+    </>
   );
 }
