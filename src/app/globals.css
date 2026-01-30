@@ -21,6 +21,7 @@
   --main-foreground: oklch(0% 0 0);
 
   --main: oklch(67.47% 0.1725 259.61);
+  --secondary: oklch(70.32% 0.1747 295.13);
   --border: oklch(0% 0 0);
   --ring: oklch(0% 0 0);
   --overlay: oklch(0% 0 0 / 0.8);
