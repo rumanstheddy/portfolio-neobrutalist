@@ -38,7 +38,7 @@ function ProfileImage() {
         alt="Sumanth Chinnaobireddy"
         width={448}
         height={448}
-        className="h-full w-full object-cover"
+        className="border-border h-full w-full border-2 object-cover"
         priority
       />
     </div>

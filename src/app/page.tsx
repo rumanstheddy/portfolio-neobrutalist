@@ -27,6 +27,7 @@ export default function Home() {
             size={250}
             className="absolute -right-[125px] bottom-[1248px] hidden lg:block"
           />
+          {/* // TODO: use another star at the bottom of the page with **GREEN** colour */}
           {/* //? Hero section - name, profile photo, social buttons */}
           <section
             className="border-border rounded-base md:bg-background bg-main md:text-foreground text-main-foreground p-5 py-7 md:border-x-4 md:border-b-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:py-16"

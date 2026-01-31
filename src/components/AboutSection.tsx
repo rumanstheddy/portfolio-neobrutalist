@@ -137,7 +137,7 @@ export default function AboutSection() {
                     {position.duration}
                   </span>
                 </div>
-                <ul className="mt-4 list-disc space-y-3 pl-6 text-left text-base">
+                <ul className="mt-4 list-disc space-y-3 pl-6 text-left text-md">
                   {position.bullets.map((bullet, bidx) => (
                     <li key={bidx}>{bullet}</li>
                   ))}

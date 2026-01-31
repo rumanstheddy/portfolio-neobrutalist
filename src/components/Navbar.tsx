@@ -3,6 +3,7 @@ import Link from "next/link";
 import IconButton from "./IconButton";
 import profileInfo from "@/data/profile";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Navbar() {
   const { link: downloadLink, text: buttonText } = profileInfo.about.download;
@@ -33,7 +34,7 @@ export default function Navbar() {
         root: null,
         rootMargin: "0px 0px -40% 0px", // Trigger a bit before the section is fully in view
         threshold: [0.2, 0.5, 0.8],
-      }
+      },
     );
     sectionElements.forEach((el) => observer.observe(el));
     return () => {
@@ -51,12 +52,19 @@ export default function Navbar() {
     <nav className="border-border bg-main fixed top-0 left-0 z-20 mx-auto flex h-[70px] w-full items-center border-b-4">
       <div className="text-foreground mx-auto flex w-[80%] max-w-full items-center justify-between 2xl:p-14">
         {/* Logo left */}
-        <Link
+        {/* <Link
           className="rounded-base bg-secondary-background text-main-foreground font-heading flex size-8 items-center justify-center border-2 border-black text-[22px]"
           href={"#profile"}
         >
           S
-        </Link>
+        </Link> */}
+        <Image
+          className="rounded-base border-border size-10 border-2 sm:size-12"
+          src={"/me2.jpg"}
+          alt="pfp"
+          width={40}
+          height={40}
+        />
         {/* Centered nav links */}
         <div className="flex flex-1 justify-center">
           <div className="font-base flex items-center gap-16 text-base">
@@ -66,8 +74,8 @@ export default function Navbar() {
                 href={link.href}
                 className={
                   (activeSection === link.id
-                    ? "underline underline-offset-4 text-main-foreground font-bold"
-                    : "hover:underline") +
+                    ? "text-main-foreground font-bold underline underline-offset-4"
+                    : "underline-offset-4 hover:underline") +
                   " transition-colors"
                 }
               >
