@@ -4,6 +4,8 @@ import ProjectsSection from "../components/ProjectsSection";
 import Navbar from "../components/Navbar";
 import Star20 from "@/components/stars/Star20";
 import Star14 from "@/components/stars/Star14";
+import Star15 from "@/components/stars/Star15";
+import Star3 from "@/components/stars/Star3";
 
 export default function Home() {
   return (
@@ -20,12 +22,26 @@ export default function Home() {
             size={250}
             className="absolute top-[480px] -left-[125px] hidden lg:block"
           />
-          <Star14
-            color="var(--main)"
+          <Star15
+            color="var(--accent)"
             stroke="black"
             strokeWidth={3}
             size={250}
-            className="absolute -right-[125px] bottom-[1248px] hidden lg:block"
+            className="absolute top-[1440px] -right-[125px] hidden lg:block"
+          />
+          <Star14
+            color="var(--image-background)"
+            stroke="black"
+            strokeWidth={3}
+            size={250}
+            className="absolute bottom-[1248px] -left-[125px] hidden lg:block"
+          />
+          <Star3
+            color="var(--svg-accent)"
+            stroke="black"
+            strokeWidth={3}
+            size={250}
+            className="absolute -right-[125px] bottom-[480px] hidden lg:block"
           />
           {/* // TODO: use another star at the bottom of the page with **GREEN** colour */}
           {/* //? Hero section - name, profile photo, social buttons */}
