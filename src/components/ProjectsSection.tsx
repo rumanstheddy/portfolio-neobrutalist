@@ -55,7 +55,7 @@ export default function ProjectsSection() {
                     href={project.link}
                     svgPath={isGithub ? GITHUB_SVG_PATH : DEFAULT_SVG_PATH}
                     ariaLabel={project.linkText}
-                    className="bg-main"
+                    className="bg-(--accent-secondary)"
                     svgSize="size-8"
                     svgViewBox={
                       isGithub ? GITHUB_SVG_VIEWBOX : DEFAULT_SVG_VIEWBOX

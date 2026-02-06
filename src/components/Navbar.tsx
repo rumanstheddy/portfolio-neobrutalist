@@ -52,19 +52,12 @@ export default function Navbar() {
     <nav className="border-border bg-main fixed top-0 left-0 z-20 mx-auto flex h-24 w-full items-center border-b-4">
       <div className="text-foreground mx-auto flex w-[80%] max-w-full items-center justify-between 2xl:p-14">
         {/* Logo left */}
-        {/* <Link
-          className="rounded-base bg-secondary-background text-main-foreground font-heading flex size-8 items-center justify-center border-2 border-black text-[22px]"
+        <Link
+          className="shadow-shadow dark:shadow-shadow rounded-base bg-(--accent-secondary) text-main-foreground font-heading flex size-12 items-center justify-center border-2 border-black text-[22px] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
           href={"#profile"}
         >
           S
-        </Link> */}
-        <Image
-          className="rounded-base border-border size-10 border-2 sm:size-12"
-          src={"/me2.jpg"}
-          alt="pfp"
-          width={40}
-          height={40}
-        />
+        </Link>
         {/* Centered nav links */}
         <div className="flex flex-1 justify-center">
           <div className="font-base flex items-center gap-16">
@@ -76,7 +69,7 @@ export default function Navbar() {
                   (activeSection === link.id
                     ? "font-bold underline decoration-2 underline-offset-6"
                     : "decoration-2 underline-offset-6 hover:underline") +
-                  " transition-colors text-lg"
+                  " text-lg transition-colors"
                 }
               >
                 {link.label}

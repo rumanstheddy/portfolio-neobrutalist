@@ -115,8 +115,7 @@ const profileInfo: ProfileInfo = {
   },
   about: {
     title: "About",
-    description:
-      "Dive into my journey – from academic milestones to professional endeavours. Discover my story in a resumé format.",
+    description: "My background, and experience in a resumé snapshot.",
     download: {
       link: "https://dl.dropboxusercontent.com/scl/fi/m3ejqbey5pj1pedrzwztl/Sumanth-Reddy-Resume.pdf?rlkey=yw6uhdxolu8xhfsgcmflvb0b6&st=g6va213b&dl=0",
       text: "My Resumé",
@@ -177,7 +176,7 @@ const profileInfo: ProfileInfo = {
   projects: {
     title: "My Projects",
     description:
-      "I've been involved in diverse projects throughout my career, and I take pride in the strides we've made. If any of these projects catch your interest, explore the code and share any suggestions for improvements or enhancements. Collaboration is a fantastic opportunity for learning and development, and I welcome new ideas and feedback with open arms. Feel free to connect and share your insights!",
+      "Browse a selection of my work. I welcome your feedback and ideas for improvement!",
     list: [
       {
         title: "SeizureCare",
@@ -217,7 +216,7 @@ const profileInfo: ProfileInfo = {
           buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
           buildImgShieldLink("React", defaultBgColor, "61DAFB"),
           buildImgShieldLink("MongoDB", defaultBgColor, "47A248"),
-          buildImgShieldLink("CSS3", defaultBgColor, "1572B6"),
+          buildImgShieldLink("CSS3", defaultBgColor, "1572B6", "css"),
           buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
           buildImgShieldLink("Express", defaultBgColor, "FFFFFF"),
         ],

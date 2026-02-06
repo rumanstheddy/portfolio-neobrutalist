@@ -19,21 +19,25 @@ const skills = {
     { text: "GraphQL", svg: "graphql.svg" },
     { text: "HTML", svg: "html5.svg" },
     { text: "CSS", svg: "css.svg" },
+    { text: "SQL", svg: "database.svg" },
+    { text: "Docker", svg: "docker.svg" },
+    { text: "AWS", svg: "aws.svg" },
+    { text: "Azure", svg: "azure.svg" },
   ],
   frameworksLibraries: [
     // Frameworks & Libraries
     { text: "React", svg: "react.svg" },
     { text: "Next.js", svg: "next.svg" },
     { text: "Angular", svg: "angular.svg" },
-    { text: ".NET", svg: "dotnet.svg" },
-    { text: "Node", svg: "node.svg" },
-    // Databases & Management tools
+    { text: ".NET" },
+    // { text: ".NET", svg: "dotnet.svg" },
     { text: "MongoDB", svg: "mongodb.svg" },
     { text: "MySQL", svg: "mysql.svg" },
     { text: "PostgreSQL", svg: "postgresql.svg" },
     { text: "SQLite", svg: "sqlite.svg" },
+    { text: "Node", svg: "node.svg" },
+    // Databases & Management tools
     // Platforms & AI Tools
-    { text: "Docker", svg: "docker.svg" },
   ],
 };
 
@@ -45,7 +49,7 @@ export default function Home() {
       <Navbar />
       <main className="bg-background relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-size-[70px_70px] py-[65px]">
         <div className="flex max-w-full flex-col items-center">
-          {/* <Star20
+          <Star20
             color="var(--main)"
             stroke="black"
             strokeWidth={3}
@@ -57,6 +61,13 @@ export default function Home() {
             stroke="black"
             strokeWidth={3}
             size={250}
+            className="absolute bottom-[1248px] -left-[125px] hidden lg:block"
+          />
+          <Star3
+            color="var(--accent-secondary)"
+            stroke="black"
+            strokeWidth={3}
+            size={250}
             className="absolute top-[1440px] -right-[125px] hidden lg:block"
           />
           <Star14
@@ -64,18 +75,11 @@ export default function Home() {
             stroke="black"
             strokeWidth={3}
             size={250}
-            className="absolute bottom-[1248px] -left-[125px] hidden lg:block"
-          />
-          <Star3
-            color="var(--svg-accent)"
-            stroke="black"
-            strokeWidth={3}
-            size={250}
             className="absolute -right-[125px] bottom-[480px] hidden lg:block"
-          /> */}
+          />
           {/* //? Hero section - name, profile photo, social buttons */}
           <section
-            className="border-border md:bg-background bg-main md:text-foreground text-main-foreground w-[80%] p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:pt-16 2xl:pb-14 2xl:mt-4"
+            className="border-border md:bg-background bg-main md:text-foreground text-main-foreground w-[80%] p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:mt-4 2xl:p-14 2xl:pt-16 2xl:pb-14"
             id="profile"
           >
             <HeroSection />

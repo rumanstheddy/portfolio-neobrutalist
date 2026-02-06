@@ -1,5 +1,5 @@
 import Image from "next/image";
-type Skill = { text: string; svg: string };
+type Skill = { text: string; svg?: string };
 
 function MarqueeItems({
   items,
@@ -10,23 +10,28 @@ function MarqueeItems({
 }) {
   return (
     <>
-      {items.map((item) => (
-        <span
-          key={item.text + keySuffix}
-          className="text-md mx-8 flex items-center gap-4 md:text-xl"
-        >
-          <Image
-            src={"/svgs/" + item.svg}
-            alt={item.text + " icon"}
-            width={32}
-            height={32}
-            className="inline-block h-8 w-8 align-middle"
-            loading="lazy"
-            unoptimized
-          />
-          <span>{item.text}</span>
-        </span>
-      ))}
+      {items.map((item) => {
+        // SVG with text
+        return (
+          <span
+            key={item.text + keySuffix}
+            className="text-md font-semibold mx-12 flex items-center gap-2 md:text-xl"
+          >
+            {item.svg && (
+              <Image
+                src={"/svgs/" + item.svg}
+                alt={item.text + " icon"}
+                width={32}
+                height={32}
+                className="inline-block h-8 w-8 align-middle"
+                loading="lazy"
+                unoptimized
+              />
+            )}
+            <span>{item.text}</span>
+          </span>
+        );
+      })}
     </>
   );
 }
