@@ -69,7 +69,7 @@ export default function AboutSection() {
 
       {/* //? Education Section */}
       <div
-        className={`rounded-base sm:shadow-shadow border-border shadow-shadow flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
+        className={`rounded-base sm:shadow-sm border-border shadow-sm flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
       >
         <SectionTitle
           icon={
@@ -107,7 +107,7 @@ export default function AboutSection() {
 
       {/* //? Professional Experience Section */}
       <div
-        className={`rounded-base sm:shadow-shadow border-border shadow-shadow flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
+        className={`rounded-base sm:shadow-sm border-border shadow-sm flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
       >
         <SectionTitle
           icon={

@@ -35,7 +35,8 @@ export default function IconButton({
   svgViewBox = "0 0 496 512",
 }: IconButtonProps) {
   // ? If text is provided, allow width to expand with padding; otherwise, keep a fixed size
-  const baseClasses = "rounded-base border-border shadow-nav dark:shadow-navDark dark:border-darkBorder flex items-center justify-center border-2 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:hover:shadow-none gap-4";
+  const baseClasses =
+    "rounded-base border-border shadow-shadow dark:shadow-shadow dark:border-darkBorder flex items-center justify-center border-2 transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:hover:shadow-none gap-4";
   const textClasses = children ? "p-4 w-auto" : "w-16 h-16";
   return (
     <a
@@ -54,9 +55,7 @@ export default function IconButton({
       >
         <path d={svgPath} />
       </svg>
-      {children && (
-        <span className="font-semibold">{children}</span>
-      )}
+      {children && <span className="font-semibold">{children}</span>}
     </a>
   );
 }

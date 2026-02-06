@@ -1,6 +1,5 @@
 // Type definitions
 export interface MainInfo {
-  title: string;
   name: string;
   email: string;
   logo: string;
@@ -18,6 +17,7 @@ export interface SocialLinks {
 export interface HomepageInfo {
   title: string;
   description: string;
+  greetings: string[];
 }
 
 export interface ExperiencePosition {
@@ -95,8 +95,7 @@ const defaultBgColor = "141414";
 
 const profileInfo: ProfileInfo = {
   main: {
-    title: "Sumanth Chinnaobireddy",
-    name: "Sumanth Reddy",
+    name: "Sumanth",
     email: "sumanthcob@gmail.com",
     logo: "../logo.png",
   },
@@ -109,9 +108,10 @@ const profileInfo: ProfileInfo = {
     facebook: "https://facebook.com/",
   },
   homepage: {
-    title: "Sumanth Chinnaobireddy",
+    title: "I'm Sumanth 👋",
     description:
-      "I'm a Software Engineer specializing in JavaScript and TypeScript. Proficient in crafting scalable, secure, and dependable web applications, I leverage various frameworks and technologies. I thrive on tackling intricate challenges and acquiring new skills. My passion lies in producing high-quality code adhering to best practices and industry standards. Eager for fresh challenges, I continually seek opportunities to enhance my skills and evolve as a developer.",
+      "A Full-Stack Engineer with a specialized focus on Frontend Development. Based in Raleigh NC, I build high-performance, accessible web applications using React, TypeScript, and Node. I'm passionate about open-source, web technologies, and building cool stuff.",
+    greetings: ["Hey", "Namaste", "नमस्ते", "నమస్కారం"],
   },
   about: {
     title: "About",

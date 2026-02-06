@@ -76,14 +76,15 @@
   --radius-base: var(--border-radius);
 
   --shadow-shadow: var(--shadow);
-  --shadow-nav: 4px 4px 0px 0px var(--border);
+  --shadow-sm: 2px 2px 0px 0px var(--border);
   --shadow-darkNav: 4px 4px 0px 0px var(--dark-border);
 
   --font-weight-base: var(--base-font-weight);
   --font-weight-heading: var(--heading-font-weight);
 
-  --animate-marquee: marquee 5s linear infinite;
-  --animate-marquee2: marquee2 5s linear infinite;
+  --animate-marquee: marquee 20s linear infinite;
+  --animate-marquee2: marquee2 20s linear infinite;
+  /* --animate-marquee3: marquee2 20s linear infinite; */
 
   --spacing-container: 1300px;
 

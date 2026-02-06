@@ -27,7 +27,7 @@ export default function ProjectsSection() {
           <div
             key={idx}
             className={
-              "rounded-base sm:shadow-shadow border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 p-4 sm:border-x-2 sm:p-8"
+              "rounded-base sm:shadow-sm border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 p-4 sm:border-x-2 sm:p-8"
             }
           >
             <span className="text-xl font-bold">{project.title}</span>

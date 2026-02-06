@@ -49,7 +49,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="border-border bg-main fixed top-0 left-0 z-20 mx-auto flex h-[70px] w-full items-center border-b-4">
+    <nav className="border-border bg-main fixed top-0 left-0 z-20 mx-auto flex h-24 w-full items-center border-b-4">
       <div className="text-foreground mx-auto flex w-[80%] max-w-full items-center justify-between 2xl:p-14">
         {/* Logo left */}
         {/* <Link
@@ -67,17 +67,16 @@ export default function Navbar() {
         />
         {/* Centered nav links */}
         <div className="flex flex-1 justify-center">
-          <div className="font-base flex items-center gap-16 text-base">
+          <div className="font-base flex items-center gap-16">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                // TODO: make the offset height as long as the borders for consistency
                 className={
                   (activeSection === link.id
-                    ? "text-main-foreground font-bold underline decoration-2 underline-offset-4"
-                    : "decoration-2 underline-offset-4 hover:underline") +
-                  " transition-colors"
+                    ? "font-bold underline decoration-2 underline-offset-6"
+                    : "decoration-2 underline-offset-6 hover:underline") +
+                  " transition-colors text-lg"
                 }
               >
                 {link.label}
