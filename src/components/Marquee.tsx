@@ -15,7 +15,7 @@ function MarqueeItems({
         return (
           <span
             key={item.text + keySuffix}
-            className="text-md font-semibold mx-12 flex items-center gap-2 md:text-xl"
+            className="text-md font-semibold mx-12 flex items-center gap-2 md:text-xl transition-transform duration-200 hover:scale-110"
           >
             {item.svg && (
               <Image

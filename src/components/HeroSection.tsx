@@ -3,6 +3,7 @@ import profileInfo from "@/data/profile";
 import Image from "next/image";
 import IconButton from "./IconButton";
 import { useEffect, useState } from "react";
+import Star9 from "./stars/Star9";
 
 const { title, description, greetings } = profileInfo.homepage;
 
@@ -62,11 +63,18 @@ function ProfileImage() {
 }
 
 export default function HeroSection() {
+  const fullDescription = (
+    <>
+      A <b>Full-Stack Engineer</b> {description}
+    </>
+  );
+
   return (
     //? Intro + social buttons + profile image */
     <div className="flex flex-col items-center sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
       {/* //? Profile image first on mobile, second on desktop */}
       <div className="mb-8 block lg:mb-0 lg:hidden">
+        {/* //TODO: add the glittery border effect around profile image */}
         <ProfileImage />
       </div>
       <div className="flex flex-1 flex-col gap-10">
@@ -74,11 +82,24 @@ export default function HeroSection() {
         {/* // TODO: Change image size according to window */}
 
         <TypewriterSalutation />
-        <h1 className="text-center text-4xl text-wrap whitespace-pre-line md:text-5xl lg:text-left">
-          {title}
+        <h1 className="text-center text-4xl text-wrap whitespace-pre-line sm:mt-2 md:text-5xl lg:text-left">
+          {"I'm "}
+          <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mx-2 sm:[&_svg]:size-8 md:[&_svg]:size-10">
+            <Star9
+              className="absolute -right-2.5 -bottom-2.5 hidden sm:block md:-right-4 md:-bottom-4"
+              color="var(--main)"
+              pathClassName="stroke-5 dark:stroke-3.5 stroke-black dark:stroke-black/70"
+            />
+            <Star9
+              className="absolute -top-2.5 -left-2.5 hidden sm:block md:-top-4 md:-left-4"
+              color="var(--main)"
+              pathClassName="stroke-5 dark:stroke-3.5 stroke-black dark:stroke-black/70"
+            />
+            {title}
+          </span>
         </h1>
         <p className="text-md text-center md:text-xl lg:text-left">
-          {description}
+          {fullDescription}
         </p>
         <div className="flex items-center justify-center gap-4 lg:justify-start">
           <IconButton

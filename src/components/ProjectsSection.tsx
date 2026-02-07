@@ -12,25 +12,47 @@ const DEFAULT_SVG_PATH =
 const DEFAULT_SVG_VIEWBOX = "0 0 640 640";
 
 export default function ProjectsSection() {
-  const { title, description, list } = profileInfo.projects;
+  const { title, description, contributionsNote, contributionsLink, list } =
+    profileInfo.projects;
   return (
     // TODO: Change background color
     <div className="flex flex-col gap-10">
       <div className="flex flex-1 flex-col gap-10">
-        <h2 className="text-3xl md:text-4xl">{title}</h2>
-        <p className="text-md text-center md:text-xl lg:text-left">
-          {description}
-        </p>
+        <h2 className="text-3xl md:text-4xl">
+          {/* <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mr-2">
+            {title}
+          </span> */}
+          {title}
+        </h2>
+        <div className="flex flex-col gap-2">
+          {contributionsNote && contributionsLink && (
+            <p className="text-md text-center md:text-xl lg:text-left">
+              {contributionsNote} {" "} See my{" "}
+              <a
+                href={contributionsLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ml-1 text-blue-600 underline dark:text-blue-400"
+              >
+                contributions
+              </a>
+              .
+            </p>
+          )}
+          <p className="text-md text-center md:text-xl lg:text-left">
+            {description}
+          </p>
+        </div>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {list.map((project, idx) => (
           <div
             key={idx}
             className={
-              "rounded-base sm:shadow-sm border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 p-4 sm:border-x-2 sm:p-8"
+              "rounded-base border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 p-4 sm:border-x-2 sm:p-8 sm:shadow-sm"
             }
           >
-            <span className="text-xl font-bold">{project.title}</span>
+            <h3 className="text-xl font-bold">{project.title}</h3>
             <p className="text-base">{project.description}</p>
             <div className="mt-2 flex flex-wrap gap-2">
               {project.tech.map((tech, tIdx) => (

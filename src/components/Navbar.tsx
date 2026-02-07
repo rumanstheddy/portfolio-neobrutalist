@@ -3,7 +3,6 @@ import Link from "next/link";
 import IconButton from "./IconButton";
 import profileInfo from "@/data/profile";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export default function Navbar() {
   const { link: downloadLink, text: buttonText } = profileInfo.about.download;
@@ -53,7 +52,7 @@ export default function Navbar() {
       <div className="text-foreground mx-auto flex w-[80%] max-w-full items-center justify-between 2xl:p-14">
         {/* Logo left */}
         <Link
-          className="shadow-shadow dark:shadow-shadow rounded-base bg-(--accent-secondary) text-main-foreground font-heading flex size-12 items-center justify-center border-2 border-black text-[22px] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+          className="shadow-shadow dark:shadow-shadow rounded-base text-main-foreground font-heading flex size-12 items-center justify-center border-2 border-black bg-(--accent-secondary) text-[22px] transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
           href={"#profile"}
         >
           S
@@ -65,14 +64,25 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={
-                  (activeSection === link.id
-                    ? "font-bold underline decoration-2 underline-offset-6"
-                    : "decoration-2 underline-offset-6 hover:underline") +
-                  " text-lg transition-colors"
-                }
+                className={[
+                  "group relative text-lg transition-colors duration-300 ease-in-out",
+                  activeSection === link.id
+                    ? "text-accent font-bold"
+                    : "text-foreground/80",
+                ].join(" ")}
               >
-                {link.label}
+                <span
+                  className={[
+                    "after:absolute after:-bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-current after:transition-transform after:duration-300 after:ease-in-out",
+                    activeSection === link.id
+                      ? "after:scale-x-100"
+                      : "after:scale-x-0 group-hover:after:scale-x-100",
+                    "after:origin-left",
+                  ].join(" ")}
+                  style={{ display: "inline-block", position: "relative" }}
+                >
+                  {link.label}
+                </span>
               </Link>
             ))}
           </div>

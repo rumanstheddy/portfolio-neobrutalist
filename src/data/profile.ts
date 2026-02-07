@@ -62,6 +62,8 @@ export interface ProjectItem {
 export interface ProjectsInfo {
   title: string;
   description: string;
+  contributionsNote?: string;
+  contributionsLink?: string;
   list: ProjectItem[];
 }
 
@@ -108,9 +110,9 @@ const profileInfo: ProfileInfo = {
     facebook: "https://facebook.com/",
   },
   homepage: {
-    title: "I'm Sumanth 👋",
+    title: "Sumanth",
     description:
-      "A Full-Stack Engineer with a specialized focus on Frontend Development. Based in Raleigh NC, I build high-performance, accessible web applications using React, TypeScript, and Node. I'm passionate about open-source, web technologies, and building cool stuff.",
+      "with a specialized focus on Frontend Development. Based in Raleigh NC, I build high-performance, accessible web applications using React, TypeScript, and Node. I'm passionate about open-source, web technologies, and building cool stuff.",
     greetings: ["Hey", "Namaste", "नमस्ते", "నమస్కారం"],
   },
   about: {
@@ -136,7 +138,7 @@ const profileInfo: ProfileInfo = {
     ],
     experience: [
       {
-        title: "Front-end Software Engineer",
+        title: "Software Engineer",
         company: "U.S. Bank",
         companyLogo: "/usbank.jpg",
         duration: "Jun 2021 - Present",
@@ -175,8 +177,10 @@ const profileInfo: ProfileInfo = {
   },
   projects: {
     title: "My Projects",
-    description:
-      "Browse a selection of my work. I welcome your feedback and ideas for improvement!",
+    description: "I welcome your feedback and ideas for improvement!",
+    contributionsNote: "Alongside these, I contribute to open source.",
+    contributionsLink:
+      "https://github.com/pulls?q=is%3Apr+author%3Arumanstheddy+archived%3Afalse+is%3Amerged",
     list: [
       {
         title: "SeizureCare",

@@ -3,18 +3,20 @@ import IconButton from "./IconButton";
 
 import { ReactNode } from "react";
 import Image from "next/image";
+import Star9 from "./stars/Star9";
 
 type SectionTitleProps = {
   icon: ReactNode;
   title: string;
+  styling?: string;
 };
 
-function SectionTitle({ icon, title }: SectionTitleProps) {
+function SectionTitle({ icon, title, styling }: SectionTitleProps) {
   return (
-    <div className="mb-2 flex items-center gap-2">
+    <h3 className="mb-2 flex items-center gap-2">
       {icon}
-      <span className="text-lg font-semibold">{title}</span>
-    </div>
+      <span className={`text-xl font-semibold ${styling}`}>{title}</span>
+    </h3>
   );
 }
 
@@ -26,7 +28,7 @@ type LogoWithTextProps = {
 
 function LogoWithText({ src, alt, name }: LogoWithTextProps) {
   return (
-    <div className="mb-1 flex items-center gap-2">
+    <div className="mb-1 flex items-center gap-4">
       <Image
         src={src}
         alt={alt}
@@ -52,7 +54,12 @@ export default function AboutSection() {
     <div className="flex flex-col gap-10">
       <div className="flex flex-col items-center sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
         <div className="flex flex-1 flex-col gap-10">
-          <h2 className="text-3xl md:text-4xl">{aboutTitle}</h2>
+          <h2 className="text-3xl md:text-4xl">
+            {/* <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mr-2">
+              {aboutTitle}
+            </span> */}
+            {aboutTitle}
+          </h2>
           <p className="text-md text-center md:text-xl lg:text-left">
             {description}
           </p>
@@ -69,7 +76,7 @@ export default function AboutSection() {
 
       {/* //? Education Section */}
       <div
-        className={`rounded-base sm:shadow-sm border-border shadow-sm flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
+        className={`rounded-base border-border flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm`}
       >
         <SectionTitle
           icon={
@@ -107,7 +114,7 @@ export default function AboutSection() {
 
       {/* //? Professional Experience Section */}
       <div
-        className={`rounded-base sm:shadow-sm border-border shadow-sm flex flex-col gap-4 border-x-1 border-y-2 p-4 sm:border-x-2 sm:p-8`}
+        className={`rounded-base border-border flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm`}
       >
         <SectionTitle
           icon={
@@ -120,6 +127,7 @@ export default function AboutSection() {
             </svg>
           }
           title="Professional Experience"
+          styling="pt-2"
         />
         {/* // ? Render all experience positions dynamically with company logo, role, and duration */}
         {experience && experience.length > 0 && (
@@ -131,13 +139,13 @@ export default function AboutSection() {
                   alt={position.company}
                   name={position.company}
                 />
-                <div className="flex flex-col px-1 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-col px-1 md:mt-4 md:flex-row md:items-center md:justify-between">
                   <span className="font-semibold">{position.title}</span>
                   <span className="text-muted-foreground text-sm md:ml-4">
                     {position.duration}
                   </span>
                 </div>
-                <ul className="mt-4 list-disc space-y-3 pl-6 text-left text-md">
+                <ul className="text-md mt-4 list-disc space-y-3 pl-6 text-left">
                   {position.bullets.map((bullet, bidx) => (
                     <li key={bidx}>{bullet}</li>
                   ))}

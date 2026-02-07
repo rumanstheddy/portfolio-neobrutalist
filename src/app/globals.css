@@ -107,17 +107,42 @@
   }
 }
 
+@font-face {
+  font-family: "ClashDisplaySemiBold";
+  src: url("/fonts/ClashDisplay-Semibold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ClashDisplayMedium";
+  src: url("/fonts/ClashDisplay-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   body {
     @apply text-foreground font-base;
   }
 
   h1,
-  h2,
+  h2 {
+    font-family: "ClashDisplaySemiBold", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    @apply font-heading;
+  }
+
   h3,
   h4,
   h5,
   h6 {
+    font-family: "ClashDisplayMedium", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     @apply font-heading;
   }
 }
