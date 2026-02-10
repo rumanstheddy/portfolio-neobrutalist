@@ -39,7 +39,7 @@ function TypewriterSalutation() {
   }, [displayed, typing, index]);
 
   return (
-    <span className="text-center text-3xl font-bold text-wrap whitespace-pre-line md:text-4xl lg:text-left">
+    <span className="text-center text-3xl font-bold text-wrap whitespace-pre-line lg:text-left">
       {displayed}
       <span className="animate-pulse">|</span>
     </span>
@@ -77,21 +77,21 @@ export default function HeroSection() {
         {/* //TODO: add the glittery border effect around profile image */}
         <ProfileImage />
       </div>
-      <div className="flex flex-1 flex-col gap-10">
+      <div className="flex flex-1 flex-col gap-8 lg:gap-10">
         {/* // TODO: add the glittery border effect around name or profile image */}
         {/* // TODO: Change image size according to window */}
 
         <TypewriterSalutation />
-        <h1 className="text-center text-4xl text-wrap whitespace-pre-line sm:mt-2 md:text-5xl lg:text-left">
+        <h1 className="text-center text-4xl text-wrap whitespace-pre-line sm:mt-1 md:text-5xl lg:text-left">
           {"I'm "}
-          <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mx-2 sm:[&_svg]:size-8 md:[&_svg]:size-10">
+          <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mx-1 mr-0 border-2 px-2 py-1 sm:mx-2 [&_svg]:size-8 md:[&_svg]:size-10">
             <Star9
-              className="absolute -right-2.5 -bottom-2.5 hidden sm:block md:-right-4 md:-bottom-4"
+              className="absolute -right-3 -bottom-2.5 block md:-right-4 md:-bottom-4"
               color="var(--main)"
               pathClassName="stroke-5 dark:stroke-3.5 stroke-black dark:stroke-black/70"
             />
             <Star9
-              className="absolute -top-2.5 -left-2.5 hidden sm:block md:-top-4 md:-left-4"
+              className="absolute -top-2.5 -left-3 block md:-top-4 md:-left-4"
               color="var(--main)"
               pathClassName="stroke-5 dark:stroke-3.5 stroke-black dark:stroke-black/70"
             />

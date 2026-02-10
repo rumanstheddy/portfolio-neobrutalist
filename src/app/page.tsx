@@ -48,7 +48,7 @@ export default function Home() {
       {/* // TODO: add stars wherever relevant for more neobrutalism flair - refer to 'stars' link in neobrutalism components */}
       <Navbar />
       <main className="bg-background relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-size-[70px_70px] py-[65px]">
-        <div className="flex max-w-full flex-col items-center">
+        <div className="flex max-w-full flex-col items-center gap-4 md:gap-0">
           <Star20
             color="var(--main)"
             stroke="black"
@@ -79,30 +79,30 @@ export default function Home() {
           />
           {/* //? Hero section - name, profile photo, social buttons */}
           <section
-            className="border-border md:bg-background bg-main md:text-foreground text-main-foreground w-[80%] p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:mt-4 2xl:p-14 2xl:pt-16 2xl:pb-14"
+            className="border-border bg-background md:text-foreground text-main-foreground mt-4 p-5 py-7 md:w-[80%] md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:p-14 2xl:pt-16 2xl:pb-14"
             id="profile"
           >
             <HeroSection />
           </section>
 
-          <div className="w-[80%]">
+          <div className="md:w-[80%]">
             {/* // TODO: change the bg styling and filled icons */}
             <Marquee items={skills.tech} />
           </div>
           {/* //? About section - resume */}
           <section
-            className="border-border md:bg-background bg-main md:text-foreground text-main-foreground w-[80%] border-r-0 p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:px-14 2xl:pt-14 2xl:pb-16"
-            id="about"
+            className="border-border bg-background md:text-foreground text-main-foreground border-r-0 p-5 py-7 md:w-[80%] md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:px-14 2xl:pt-14 2xl:pb-16"
+            id="resume"
           >
             <AboutSection />
           </section>
-          <div className="w-[80%]">
+          <div className="md:w-[80%]">
             {/* // TODO: change the bg styling and filled icons */}
             <Marquee items={skills.frameworksLibraries} />
           </div>
           {/* //? Projects section */}
           <section
-            className="border-border rounded-b-base md:bg-background bg-main md:text-foreground text-main-foreground w-[80%] border-r-0 border-b-4 p-5 py-7 md:border-x-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:px-14 2xl:pt-14 2xl:pb-16"
+            className="border-border rounded-b-base bg-background md:text-foreground text-main-foreground border-r-0 p-5 py-7 md:w-[80%] md:border-x-4 md:border-b-4 lg:p-8 lg:py-10 xl:p-10 xl:py-10 2xl:px-14 2xl:pt-14 2xl:pb-16"
             id="projects"
           >
             <ProjectsSection />

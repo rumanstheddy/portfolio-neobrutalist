@@ -116,24 +116,24 @@ const profileInfo: ProfileInfo = {
     greetings: ["Hey", "Namaste", "नमस्ते", "నమస్కారం"],
   },
   about: {
-    title: "About",
+    title: "Resumé",
     description: "My background, and experience in a resumé snapshot.",
     download: {
       link: "https://dl.dropboxusercontent.com/scl/fi/m3ejqbey5pj1pedrzwztl/Sumanth-Reddy-Resume.pdf?rlkey=yw6uhdxolu8xhfsgcmflvb0b6&st=g6va213b&dl=0",
-      text: "My Resumé",
+      text: "Download",
     },
     education: [
       {
         university: "Northeastern University",
         logo: "/NEU.png",
         degree: "Master of Science - Computer Science",
-        duration: "Sept 2019 - May 2021",
+        duration: "Sep 2019 - May 2021",
       },
       {
         university: "BML Munjal University",
         logo: "/bmu.jpg",
         degree: "Bachelor of Technology - Computer Science and Engineering",
-        duration: "Jan 2015 - July 2019",
+        duration: "Jan 2015 - Jul 2019",
       },
     ],
     experience: [

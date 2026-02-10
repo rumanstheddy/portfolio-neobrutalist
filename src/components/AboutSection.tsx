@@ -3,7 +3,6 @@ import IconButton from "./IconButton";
 
 import { ReactNode } from "react";
 import Image from "next/image";
-import Star9 from "./stars/Star9";
 
 type SectionTitleProps = {
   icon: ReactNode;
@@ -15,7 +14,9 @@ function SectionTitle({ icon, title, styling }: SectionTitleProps) {
   return (
     <h3 className="mb-2 flex items-center gap-2">
       {icon}
-      <span className={`text-xl font-semibold ${styling}`}>{title}</span>
+      <span className={`text-lg font-semibold md:text-xl ${styling}`}>
+        {title}
+      </span>
     </h3>
   );
 }
@@ -46,15 +47,16 @@ export default function AboutSection() {
     title: aboutTitle,
     description,
     download,
+    education,
     experience,
   } = profileInfo.about;
   const { link: downloadLink, text: buttonText } = download;
 
   return (
     <div className="flex flex-col gap-10">
-      <div className="flex flex-col items-center sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
-        <div className="flex flex-1 flex-col gap-10">
-          <h2 className="text-3xl md:text-4xl">
+      <div className="flex flex-col items-center gap-8 sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
+        <div className="flex flex-1 flex-col gap-8 lg:gap-10">
+          <h2 className="text-center text-3xl text-wrap lg:text-left">
             {/* <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mr-2">
               {aboutTitle}
             </span> */}
@@ -75,9 +77,7 @@ export default function AboutSection() {
       </div>
 
       {/* //? Education Section */}
-      <div
-        className={`rounded-base border-border flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm`}
-      >
+      <div className="rounded-base border-border flex flex-col items-center gap-4 border-x-1 border-y-2 px-4 py-8 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm md:items-start">
         <SectionTitle
           icon={
             <svg
@@ -90,32 +90,34 @@ export default function AboutSection() {
           }
           title="Education"
         />
-        {profileInfo.about.education &&
-          profileInfo.about.education.length > 0 && (
-            <div className="flex flex-col gap-8">
-              {profileInfo.about.education.map((edu, idx) => (
-                <div key={idx} className="flex flex-col gap-2">
-                  <LogoWithText
-                    src={edu.logo}
-                    alt={edu.university}
-                    name={edu.university}
-                  />
-                  <div className="flex flex-col px-1 md:flex-row md:items-center md:justify-between">
-                    <span className="font-semibold">{edu.degree}</span>
-                    <span className="text-muted-foreground text-sm md:ml-4">
-                      {edu.duration}
-                    </span>
-                  </div>
+        {education && education.length > 0 && (
+          <div className="flex w-full flex-col gap-8">
+            {education.map((edu, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-2 md:items-start"
+              >
+                <LogoWithText
+                  src={edu.logo}
+                  alt={edu.university}
+                  name={edu.university}
+                />
+                <div className="flex w-full flex-col items-center gap-4 px-1 md:flex-row md:justify-between md:gap-0">
+                  <span className="text-center font-semibold md:text-left">
+                    {edu.degree}
+                  </span>
+                  <span className="text-muted-foreground text-sm md:ml-4">
+                    {edu.duration}
+                  </span>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* //? Professional Experience Section */}
-      <div
-        className={`rounded-base border-border flex flex-col gap-4 border-x-1 border-y-2 p-4 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm`}
-      >
+      <div className="rounded-base border-border flex flex-col items-center gap-4 border-x-1 border-y-2 px-4 py-8 shadow-sm sm:border-x-2 sm:p-8 sm:shadow-sm md:items-start">
         <SectionTitle
           icon={
             <svg
@@ -133,19 +135,22 @@ export default function AboutSection() {
         {experience && experience.length > 0 && (
           <div className="flex flex-col gap-10">
             {experience.map((position, idx) => (
-              <div key={idx} className="flex flex-col gap-2">
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-2 md:items-start"
+              >
                 <LogoWithText
                   src={position.companyLogo}
                   alt={position.company}
                   name={position.company}
                 />
-                <div className="flex flex-col px-1 md:mt-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex w-full flex-col items-center gap-4 px-1 md:flex-row md:justify-between md:gap-0">
                   <span className="font-semibold">{position.title}</span>
                   <span className="text-muted-foreground text-sm md:ml-4">
                     {position.duration}
                   </span>
                 </div>
-                <ul className="text-md mt-4 list-disc space-y-3 pl-6 text-left">
+                <ul className="text-base mt-4 list-disc space-y-3 text-justify pl-3 pr-1 md:pr-0 md:pl-6 md:text-left">
                   {position.bullets.map((bullet, bidx) => (
                     <li key={bidx}>{bullet}</li>
                   ))}

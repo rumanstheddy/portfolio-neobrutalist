@@ -17,8 +17,8 @@ export default function ProjectsSection() {
   return (
     // TODO: Change background color
     <div className="flex flex-col gap-10">
-      <div className="flex flex-1 flex-col gap-10">
-        <h2 className="text-3xl md:text-4xl">
+      <div className="flex flex-1 flex-col gap-8 md:gap-10">
+        <h2 className="text-center text-3xl text-wrap lg:text-left">
           {/* <span className="bg-main/30 rounded-base border-border/40 dark:border-border/70 relative mr-0 border-2 px-2 py-1 sm:mr-2">
             {title}
           </span> */}
@@ -27,7 +27,7 @@ export default function ProjectsSection() {
         <div className="flex flex-col gap-2">
           {contributionsNote && contributionsLink && (
             <p className="text-md text-center md:text-xl lg:text-left">
-              {contributionsNote} {" "} See my{" "}
+              {contributionsNote} See my{" "}
               <a
                 href={contributionsLink}
                 target="_blank"
@@ -49,12 +49,16 @@ export default function ProjectsSection() {
           <div
             key={idx}
             className={
-              "rounded-base border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 p-4 sm:border-x-2 sm:p-8 sm:shadow-sm"
+              "rounded-base border-border shadow-shadow bg-background flex flex-col justify-between gap-4 border-x border-y-2 px-4 py-8 sm:border-x-2 sm:p-8 sm:shadow-sm"
             }
           >
-            <h3 className="text-xl font-bold">{project.title}</h3>
-            <p className="text-base">{project.description}</p>
-            <div className="mt-2 flex flex-wrap gap-2">
+            <h3 className="text-center text-xl font-bold md:text-left">
+              {project.title}
+            </h3>
+            <p className="text-center text-base md:text-left">
+              {project.description}
+            </p>
+            <div className="mt-2 flex flex-wrap justify-center gap-2 md:justify-start">
               {project.tech.map((tech, tIdx) => (
                 <Image
                   key={tIdx}
