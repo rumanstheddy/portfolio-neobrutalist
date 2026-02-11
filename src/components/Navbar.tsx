@@ -73,6 +73,7 @@ export default function Navbar() {
     };
   }, []);
 
+  // TODO: adjust ids to view the whole section on scroll, currently the headings are being cut off
   const navLinks = [
     { href: "#profile", label: "Profile", id: "profile" },
     { href: "#resume", label: "Resumé", id: "resume" },

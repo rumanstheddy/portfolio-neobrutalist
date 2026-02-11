@@ -1,6 +1,20 @@
 import Image from "next/image";
-type Skill = { text: string; svg?: string };
 
+/**
+ * Represents a skill item for the marquee.
+ * @property text - The display text for the skill (e.g., 'JavaScript', '.NET').
+ * @property svg - (Optional) The SVG filename for the skill icon.
+ */
+type Skill = {
+  text: string;
+  svg?: string;
+};
+
+/**
+ * Renders a list of skill items for the marquee animation.
+ * @param items - Array of skill objects to display.
+ * @param keySuffix - (Optional) Suffix to append to React keys for uniqueness.
+ */
 function MarqueeItems({
   items,
   keySuffix = "",
@@ -44,6 +58,10 @@ function MarqueeItems({
   );
 }
 
+/**
+ * Marquee component that displays a horizontally scrolling list of skills.
+ * @param items - Array of skill objects to display in the marquee.
+ */
 export default function Marquee({ items }: { items: Skill[] }) {
   return (
     <div className="border-border bg-background font-base relative flex w-full overflow-x-hidden border-x-4 border-y-2">
