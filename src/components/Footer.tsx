@@ -26,7 +26,7 @@ export default function Footer() {
           href={GITHUB_REPO_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="underline"
+          className="underline underline-offset-2"
         >
           repo
         </a>
