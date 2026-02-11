@@ -3,6 +3,13 @@ import IconButton from "./IconButton";
 
 import { ReactNode } from "react";
 import Image from "next/image";
+import {
+  DOWNLOAD_SVG_PATH,
+  EDU_SVG_PATH,
+  EDU_SVG_VIEWBOX,
+  EXP_SVG_PATH,
+  EXP_SVG_VIEWBOX,
+} from "@/lib/constants";
 
 type SectionTitleProps = {
   icon: ReactNode;
@@ -68,7 +75,7 @@ export default function AboutSection() {
         </div>
         <IconButton
           href={downloadLink}
-          svgPath="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"
+          svgPath={DOWNLOAD_SVG_PATH}
           ariaLabel="Resume Download"
           className="bg-(--accent)"
         >
@@ -83,9 +90,9 @@ export default function AboutSection() {
             <svg
               className="h-8 w-8 text-black"
               fill="currentColor"
-              viewBox="0 0 24 24"
+              viewBox={EDU_SVG_VIEWBOX}
             >
-              <path d="M3.33 8L10 12l10-6-10-6L0 6h10v2H3.33zM0 8v8l2-2.22V9.2L0 8zm10 12l-5-3-2-1.2v-6l7 4.2 7-4.2v6L10 20z" />
+              <path d={EDU_SVG_PATH} />
             </svg>
           }
           title="Education"
@@ -123,9 +130,9 @@ export default function AboutSection() {
             <svg
               className="h-8 w-8 text-black"
               fill="currentColor"
-              viewBox="0 0 24 24"
+              viewBox={EXP_SVG_VIEWBOX}
             >
-              <path d="M15 3c.552 0 1 .448 1 1v2h5c.552 0 1 .448 1 1v13c0 .552-.448 1-1 1H3c-.552 0-1-.448-1-1V7c0-.552.448-1 1-1h5V4c0-.552.448-1 1-1h6zM8 8H6v11h2V8zm10 0h-2v11h2V8zm-4-3h-4v1h4V5z" />
+              <path d={EXP_SVG_PATH} />
             </svg>
           }
           title="Professional Experience"
@@ -150,7 +157,7 @@ export default function AboutSection() {
                     {position.duration}
                   </span>
                 </div>
-                <ul className="text-base mt-4 list-disc space-y-3 text-justify pl-3 pr-1 md:pr-0 md:pl-6 md:text-left">
+                <ul className="mt-4 list-disc space-y-3 pr-1 pl-3 text-justify text-base md:pr-0 md:pl-6 md:text-left">
                   {position.bullets.map((bullet, bidx) => (
                     <li key={bidx}>{bullet}</li>
                   ))}

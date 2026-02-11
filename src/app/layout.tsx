@@ -15,7 +15,7 @@ const sora = Sora({
 
 // change font to https://fonts.google.com/specimen/Archivo
 // change font to https://fonts.google.com/specimen/Sora
-// TODO: change font to https://www.fontshare.com/fonts/clash-display
+// change font to https://www.fontshare.com/fonts/clash-display
 export const metadata: Metadata = {
   title: "Sumanth Chinnaobireddy",
   description: "Sumanth's personal website and portfolio.",

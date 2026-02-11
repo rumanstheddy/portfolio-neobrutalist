@@ -1,19 +1,11 @@
-// Type definitions
-export interface MainInfo {
-  name: string;
-  email: string;
-  logo: string;
-}
+import { buildImgShieldLink } from "@/lib/utils";
 
+// Type definitions
 export interface SocialLinks {
-  twitter: string;
   github: string;
   linkedin: string;
-  instagram: string;
-  stackoverflow: string;
-  facebook: string;
+  email: string;
 }
-
 export interface HomepageInfo {
   title: string;
   description: string;
@@ -51,10 +43,15 @@ export interface ArticlesInfo {
   description: string;
 }
 
+type TechItem = {
+  name: string;
+  link: string;
+}
+
 export interface ProjectItem {
   title: string;
   description: string;
-  tech: string[];
+  tech: TechItem[];
   linkText: string;
   link: string;
 }
@@ -68,7 +65,6 @@ export interface ProjectsInfo {
 }
 
 export interface ProfileInfo {
-  main: MainInfo;
   socials: SocialLinks;
   homepage: HomepageInfo;
   about: AboutInfo;
@@ -76,38 +72,13 @@ export interface ProfileInfo {
   projects: ProjectsInfo;
 }
 
-// Utility function
-export const buildImgShieldLink = (
-  techName: string,
-  bgColor: string,
-  logoColor: string,
-  logoName?: string,
-): string => {
-  const logo = logoName
-    ? logoName
-    : techName
-        .toLowerCase()
-        .replace(/[^a-zA-Z0-9\s.]/g, "")
-        .split(" ")
-        .join("");
-  return `https://img.shields.io/badge/-${techName}-${bgColor}?logo=${logo}&logoColor=${logoColor}&style=for-the-badge&logoWidth=30`;
-};
-
 const defaultBgColor = "141414";
 
 const profileInfo: ProfileInfo = {
-  main: {
-    name: "Sumanth",
-    email: "sumanthcob@gmail.com",
-    logo: "../logo.png",
-  },
   socials: {
-    twitter: "https://twitter.com/",
     github: "https://github.com/rumanstheddy",
     linkedin: "https://www.linkedin.com/in/sumanthcob/",
-    instagram: "https://instagram.com/",
-    stackoverflow: "https://stackoverflow.com/",
-    facebook: "https://facebook.com/",
+    email: "mailto:sumanthcob@gmail.com",
   },
   homepage: {
     title: "Sumanth",
@@ -187,12 +158,12 @@ const profileInfo: ProfileInfo = {
         description:
           "Designed and developed SeizureCare, a responsive website with React, Material UI, and SCSS, enabling EEG test requests and customer service enquiries while optimizing performance to a 90+ score on Lighthouse.",
         tech: [
-          buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
-          buildImgShieldLink("React", defaultBgColor, "61DAFB"),
-          buildImgShieldLink("Sass", defaultBgColor, "CC6699"),
-          buildImgShieldLink("AWS Amplify", defaultBgColor, "8C6FE6"),
-          buildImgShieldLink("Lighthouse", defaultBgColor, "E34F26"),
-          buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
+          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
+          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
+          {name: "Sass", link: buildImgShieldLink("Sass", defaultBgColor, "CC6699")},
+          {name: "AWS Amplify", link: buildImgShieldLink("AWS Amplify", defaultBgColor, "8C6FE6")},
+          {name: "Lighthouse", link: buildImgShieldLink("Lighthouse", defaultBgColor, "E34F26")},
+          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
         ],
         linkText: "View Project",
         link: "https://seizurecarenet.com/",
@@ -202,12 +173,12 @@ const profileInfo: ProfileInfo = {
         description:
           "Playscore Pal is a web-based platform built with Next.js, Node.js, Express, GraphQL, and MongoDB, utilizing the IGDB API. It empowers users to rate, review, and recommend games.",
         tech: [
-          buildImgShieldLink("Typescript", defaultBgColor, "3178C6"),
-          buildImgShieldLink("Next.js", defaultBgColor, "FFFFFF", "next.js"),
-          buildImgShieldLink("MongoDB", defaultBgColor, "47A248"),
-          buildImgShieldLink("GraphQL", defaultBgColor, "DA0393"),
-          buildImgShieldLink("Tailwind CSS", defaultBgColor, "06B6D4"),
-          buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
+          {name: "Typescript", link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6")},
+          {name: "Next.js", link: buildImgShieldLink("Next.js", defaultBgColor, "FFFFFF", "next.js")},
+          {name: "MongoDB", link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248")},
+          {name: "GraphQL", link: buildImgShieldLink("GraphQL", defaultBgColor, "DA0393")},
+          {name: "Tailwind CSS", link: buildImgShieldLink("Tailwind CSS", defaultBgColor, "06B6D4")},
+          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/ss-play-score-pal",
@@ -217,12 +188,12 @@ const profileInfo: ProfileInfo = {
         description:
           "Textful is a web-based application, made using React, Node.js and MongoDb that enables its users to exchange text messages directly.",
         tech: [
-          buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
-          buildImgShieldLink("React", defaultBgColor, "61DAFB"),
-          buildImgShieldLink("MongoDB", defaultBgColor, "47A248"),
-          buildImgShieldLink("CSS3", defaultBgColor, "1572B6", "css"),
-          buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
-          buildImgShieldLink("Express", defaultBgColor, "FFFFFF"),
+          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
+          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
+          {name: "MongoDB", link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248")},
+          {name: "CSS3", link: buildImgShieldLink("CSS3", defaultBgColor, "1572B6", "css")},
+          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
+          {name: "Express", link: buildImgShieldLink("Express", defaultBgColor, "FFFFFF")},
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/project-textful",
@@ -232,10 +203,10 @@ const profileInfo: ProfileInfo = {
         description:
           "Meteoscope is a weather forecast app I made using React, Chakra UI and Open Meteo API.",
         tech: [
-          buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
-          buildImgShieldLink("React", defaultBgColor, "61DAFB"),
-          buildImgShieldLink("chakra--ui", defaultBgColor, "67C9CB"),
-          buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
+          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
+          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
+          {name: "chakra--ui", link: buildImgShieldLink("chakra--ui", defaultBgColor, "67C9CB")},
+          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/meteoscope",
@@ -245,10 +216,10 @@ const profileInfo: ProfileInfo = {
         description:
           "Exploring Angular basics and SASS, I built a hands-on mobile-responsive Stop Watch web app.",
         tech: [
-          buildImgShieldLink("Angular", defaultBgColor, "D70230"),
-          buildImgShieldLink("Typescript", defaultBgColor, "3178C6"),
-          buildImgShieldLink("Sass", defaultBgColor, "CC6699"),
-          buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js"),
+          {name: "Angular", link: buildImgShieldLink("Angular", defaultBgColor, "D70230")},
+          {name: "Typescript", link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6")},
+          {name: "Sass", link: buildImgShieldLink("Sass", defaultBgColor, "CC6699")},
+          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/Ang-Stop-Watch",

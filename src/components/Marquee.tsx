@@ -15,7 +15,7 @@ function MarqueeItems({
         return (
           <span
             key={item.text + keySuffix}
-            className="text-md font-semibold mx-12 flex items-center gap-2 md:text-xl transition-transform duration-200 hover:scale-110"
+            className="text-md mx-12 flex items-center gap-2 font-semibold transition-transform duration-200 hover:scale-110 md:text-xl"
           >
             {item.svg && (
               <Image
@@ -28,7 +28,15 @@ function MarqueeItems({
                 unoptimized
               />
             )}
-            <span>{item.text}</span>
+            <span
+              style={
+                item.text.toLowerCase() === ".net"
+                  ? { color: "#512ad5" }
+                  : undefined
+              }
+            >
+              {item.text}
+            </span>
           </span>
         );
       })}

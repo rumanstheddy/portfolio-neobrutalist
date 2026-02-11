@@ -1,3 +1,4 @@
+import { ICON_BUTTON_SVG_DEFAULT_VIEWBOX } from "@/lib/constants";
 import React from "react";
 
 interface IconButtonProps {
@@ -32,7 +33,7 @@ export default function IconButton({
   svgClassName = "",
   children,
   ariaLabel,
-  svgViewBox = "0 0 496 512",
+  svgViewBox = ICON_BUTTON_SVG_DEFAULT_VIEWBOX,
 }: IconButtonProps) {
   // ? If text is provided, allow width to expand with padding; otherwise, keep a fixed size
   const baseClasses =
