@@ -40,9 +40,10 @@ function LogoWithText({ src, alt, name }: LogoWithTextProps) {
       <Image
         src={src}
         alt={alt}
-        className="h-8 w-8 rounded-full"
+        className="h-8 w-8 rounded-full object-contain aspect-square"
         width={32}
         height={32}
+
       />
       <span className="font-medium">{name}</span>
     </div>
