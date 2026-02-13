@@ -61,7 +61,7 @@ function ProfileImage() {
         width={448}
         height={448}
         className="border-border h-full w-full border-2 object-cover"
-        priority
+        fetchPriority="high"
       />
     </div>
   );
@@ -78,12 +78,11 @@ export default function HeroSection() {
     //? Intro + social buttons + profile image */
     <div className="flex flex-col items-center sm:justify-between md:gap-12 lg:flex-row lg:gap-16">
       {/* //? Profile image first on mobile, second on desktop */}
-      <div className="mb-8 md:mb-0 block lg:mb-0 lg:hidden">
+      <div className="mb-8 block md:mb-0 lg:mb-0 lg:hidden">
         {/* //TODO: add the glittery border effect around profile image */}
         <ProfileImage />
       </div>
       <div className="flex flex-1 flex-col gap-8 lg:gap-10">
-
         <TypewriterSalutation />
         <h1 className="text-center text-4xl text-wrap whitespace-pre-line sm:mt-1 lg:text-left xl:text-5xl">
           {"I'm "}

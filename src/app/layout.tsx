@@ -13,7 +13,6 @@ const sora = Sora({
   adjustFontFallback: false,
 });
 
-// change font to https://fonts.google.com/specimen/Archivo
 // change font to https://fonts.google.com/specimen/Sora
 // change font to https://www.fontshare.com/fonts/clash-display
 export const metadata: Metadata = {
@@ -28,6 +27,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Semibold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/ClashDisplay-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={sora.className}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <div className="font-base prose-headings:font-heading text-foreground">
