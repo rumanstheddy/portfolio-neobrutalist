@@ -46,7 +46,7 @@ export interface ArticlesInfo {
 type TechItem = {
   name: string;
   link: string;
-}
+};
 
 export interface ProjectItem {
   title: string;
@@ -154,31 +154,44 @@ const profileInfo: ProfileInfo = {
       "https://github.com/pulls?q=is%3Apr+author%3Arumanstheddy+archived%3Afalse+is%3Amerged",
     list: [
       {
-        title: "SeizureCare",
-        description:
-          "Designed and developed SeizureCare, a responsive website with React, Material UI, and SCSS, enabling EEG test requests and customer service enquiries while optimizing performance to a 90+ score on Lighthouse.",
-        tech: [
-          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
-          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
-          {name: "Sass", link: buildImgShieldLink("Sass", defaultBgColor, "CC6699")},
-          {name: "AWS Amplify", link: buildImgShieldLink("AWS Amplify", defaultBgColor, "8C6FE6")},
-          {name: "Lighthouse", link: buildImgShieldLink("Lighthouse", defaultBgColor, "E34F26")},
-          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
-        ],
-        linkText: "View Project",
-        link: "https://seizurecarenet.com/",
-      },
-      {
         title: "Playscore Pal",
         description:
           "Playscore Pal is a web-based platform built with Next.js, Node.js, Express, GraphQL, and MongoDB, utilizing the IGDB API. It empowers users to rate, review, and recommend games.",
         tech: [
-          {name: "Typescript", link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6")},
-          {name: "Next.js", link: buildImgShieldLink("Next.js", defaultBgColor, "FFFFFF", "next.js")},
-          {name: "MongoDB", link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248")},
-          {name: "GraphQL", link: buildImgShieldLink("GraphQL", defaultBgColor, "DA0393")},
-          {name: "Tailwind CSS", link: buildImgShieldLink("Tailwind CSS", defaultBgColor, "06B6D4")},
-          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
+          {
+            name: "Typescript",
+            link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6"),
+          },
+          {
+            name: "Next.js",
+            link: buildImgShieldLink(
+              "Next.js",
+              defaultBgColor,
+              "FFFFFF",
+              "next.js",
+            ),
+          },
+          {
+            name: "MongoDB",
+            link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248"),
+          },
+          {
+            name: "GraphQL",
+            link: buildImgShieldLink("GraphQL", defaultBgColor, "DA0393"),
+          },
+          {
+            name: "Tailwind CSS",
+            link: buildImgShieldLink("Tailwind CSS", defaultBgColor, "06B6D4"),
+          },
+          {
+            name: "NodeJS",
+            link: buildImgShieldLink(
+              "NodeJS",
+              defaultBgColor,
+              "339933",
+              "node.js",
+            ),
+          },
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/ss-play-score-pal",
@@ -188,12 +201,35 @@ const profileInfo: ProfileInfo = {
         description:
           "Textful is a web-based application, made using React, Node.js and MongoDb that enables its users to exchange text messages directly.",
         tech: [
-          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
-          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
-          {name: "MongoDB", link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248")},
-          {name: "CSS3", link: buildImgShieldLink("CSS3", defaultBgColor, "1572B6", "css")},
-          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
-          {name: "Express", link: buildImgShieldLink("Express", defaultBgColor, "FFFFFF")},
+          {
+            name: "JavaScript",
+            link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
+          },
+          {
+            name: "React",
+            link: buildImgShieldLink("React", defaultBgColor, "61DAFB"),
+          },
+          {
+            name: "MongoDB",
+            link: buildImgShieldLink("MongoDB", defaultBgColor, "47A248"),
+          },
+          {
+            name: "CSS3",
+            link: buildImgShieldLink("CSS3", defaultBgColor, "1572B6", "css"),
+          },
+          {
+            name: "NodeJS",
+            link: buildImgShieldLink(
+              "NodeJS",
+              defaultBgColor,
+              "339933",
+              "node.js",
+            ),
+          },
+          {
+            name: "Express",
+            link: buildImgShieldLink("Express", defaultBgColor, "FFFFFF"),
+          },
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/project-textful",
@@ -203,10 +239,27 @@ const profileInfo: ProfileInfo = {
         description:
           "Meteoscope is a weather forecast app I made using React, Chakra UI and Open Meteo API.",
         tech: [
-          {name: "JavaScript", link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E")},
-          {name: "React", link: buildImgShieldLink("React", defaultBgColor, "61DAFB")},
-          {name: "chakra--ui", link: buildImgShieldLink("chakra--ui", defaultBgColor, "67C9CB")},
-          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
+          {
+            name: "JavaScript",
+            link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
+          },
+          {
+            name: "React",
+            link: buildImgShieldLink("React", defaultBgColor, "61DAFB"),
+          },
+          {
+            name: "chakra--ui",
+            link: buildImgShieldLink("chakra--ui", defaultBgColor, "67C9CB"),
+          },
+          {
+            name: "NodeJS",
+            link: buildImgShieldLink(
+              "NodeJS",
+              defaultBgColor,
+              "339933",
+              "node.js",
+            ),
+          },
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/meteoscope",
@@ -216,13 +269,68 @@ const profileInfo: ProfileInfo = {
         description:
           "Exploring Angular basics and SASS, I built a hands-on mobile-responsive Stop Watch web app.",
         tech: [
-          {name: "Angular", link: buildImgShieldLink("Angular", defaultBgColor, "D70230")},
-          {name: "Typescript", link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6")},
-          {name: "Sass", link: buildImgShieldLink("Sass", defaultBgColor, "CC6699")},
-          {name: "NodeJS", link: buildImgShieldLink("NodeJS", defaultBgColor, "339933", "node.js")},
+          {
+            name: "Angular",
+            link: buildImgShieldLink("Angular", defaultBgColor, "D70230"),
+          },
+          {
+            name: "Typescript",
+            link: buildImgShieldLink("Typescript", defaultBgColor, "3178C6"),
+          },
+          {
+            name: "Sass",
+            link: buildImgShieldLink("Sass", defaultBgColor, "CC6699"),
+          },
+          {
+            name: "NodeJS",
+            link: buildImgShieldLink(
+              "NodeJS",
+              defaultBgColor,
+              "339933",
+              "node.js",
+            ),
+          },
         ],
         linkText: "View Project",
         link: "https://github.com/rumanstheddy/Ang-Stop-Watch",
+      },
+      {
+        title: "SeizureCare",
+        description:
+          "Designed and developed SeizureCare, a responsive website with React, Material UI, and SCSS, enabling EEG test requests and customer service enquiries while optimizing performance to a 90+ score on Lighthouse.",
+        tech: [
+          {
+            name: "JavaScript",
+            link: buildImgShieldLink("JavaScript", defaultBgColor, "F7DF1E"),
+          },
+          {
+            name: "React",
+            link: buildImgShieldLink("React", defaultBgColor, "61DAFB"),
+          },
+          {
+            name: "Sass",
+            link: buildImgShieldLink("Sass", defaultBgColor, "CC6699"),
+          },
+          {
+            name: "AWS Amplify",
+            link: buildImgShieldLink("AWS Amplify", defaultBgColor, "8C6FE6"),
+          },
+          {
+            name: "Lighthouse",
+            link: buildImgShieldLink("Lighthouse", defaultBgColor, "E34F26"),
+          },
+          {
+            name: "NodeJS",
+            link: buildImgShieldLink(
+              "NodeJS",
+              defaultBgColor,
+              "339933",
+              "node.js",
+            ),
+          },
+        ],
+        linkText: "View Project",
+        link: "https://seizurecarenet.com/",
       },
     ],
   },
