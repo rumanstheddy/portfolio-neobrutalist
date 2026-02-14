@@ -149,7 +149,7 @@ const profileInfo: ProfileInfo = {
   projects: {
     title: "My Projects",
     description: "I welcome your feedback and ideas for improvement!",
-    contributionsNote: "Alongside these, I contribute to open source.",
+    contributionsNote: "Alongside these, see my open source",
     contributionsLink:
       "https://github.com/pulls?q=is%3Apr+author%3Arumanstheddy+archived%3Afalse+is%3Amerged",
     list: [

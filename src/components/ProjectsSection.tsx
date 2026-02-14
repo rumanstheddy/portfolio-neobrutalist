@@ -17,23 +17,23 @@ export default function ProjectsSection() {
       <div className="flex flex-1 flex-col gap-8 md:gap-10">
         <h2 className="text-center text-3xl text-wrap lg:text-left">{title}</h2>
         <div className="flex flex-col gap-2">
+          <p className="text-md text-center md:text-xl lg:text-left">
+            {description}
+          </p>
           {contributionsNote && contributionsLink && (
             <p className="text-md text-center md:text-xl lg:text-left">
-              {contributionsNote} See my{" "}
+              {contributionsNote}
               <a
                 href={contributionsLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-1 text-blue-600 underline dark:text-blue-400"
+                className="ml-1 underline underline-offset-2 text-(--accent-secondary)"
               >
                 contributions
               </a>
               .
             </p>
           )}
-          <p className="text-md text-center md:text-xl lg:text-left">
-            {description}
-          </p>
         </div>
       </div>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
