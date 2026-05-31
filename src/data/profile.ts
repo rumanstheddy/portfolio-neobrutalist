@@ -90,7 +90,7 @@ const profileInfo: ProfileInfo = {
     title: "Resumé",
     description: "My background, and experience in a resumé snapshot.",
     download: {
-      link: "https://www.dropbox.com/scl/fi/envv1evympg5vv3qq0sky/Sumanth-Resume.pdf?rlkey=o6p8to0l7hpnlxmr072or1e8p&st=72sj3yic&dl=0",
+      link: "https://www.dropbox.com/scl/fi/m3ejqbey5pj1pedrzwztl/Sumanth-Reddy-Resume.pdf?rlkey=yw6uhdxolu8xhfsgcmflvb0b6&st=zznnpkn7&dl=0",
       text: "Download",
     },
     education: [
